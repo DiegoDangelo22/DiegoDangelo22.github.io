@@ -1,0 +1,33 @@
+<nav class="w-full h-[56px] fixed top-0 z-10 text-white flex justify-between py-4 px-10">
+    <div>
+        <a href="/"><span class="text-rose-500 font-bold">Diego</span> <span class="font-bold">D'Angelo</span></a>
+    </div>
+    <svg class="icon icon-tabler icon-tabler-menu-2 md:hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+    <div>
+        <ul class="gap-10 hidden md:flex">
+            <li class="hover:text-blue-400">
+                <a href="/services">Services</a>
+            </li>
+            <li class="hover:text-blue-400">
+                <a href="/projects">Projects</a>
+            </li>
+            <li class="hover:text-blue-400">
+                <a href="/#about">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    nav {
+        animation: enhance-header linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 200px;
+    }
+    @keyframes enhance-header {
+        to {
+            background: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    }
+</style>

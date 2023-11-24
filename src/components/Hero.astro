@@ -1,0 +1,37 @@
+---
+import AnimatedSkillText from "./AnimatedSkillText.astro";
+---
+
+<div class="h-screen pt-14 pb-32 box-content flex flex-col justify-center items-center gap-10 md:flex-row md:gap-36 overflow-hidden">
+    <div class="items-start flex w-80 min-h-[72px]">
+        <AnimatedSkillText />
+    </div>
+    <div class="relative">
+        <div class="w-[300px] h-[400px] relative shadow-[0_0_100px_20px_rgba(244,63,94,0.7)] blur-sm bg-transparent shadow-rose-500 rounded-[60px]">
+            <div class="w-[300px] h-[400px] items-center flex shadow-[inset_-10px_-10px_200px_0px_rgba(244,63,94,0.89)] rounded-[60px] bg-transparent">
+            </div>
+        </div>
+        <img id="diego" src="/diego.jpg" width="300px" class="absolute border-2 border-rose-500 rounded">
+    </div>
+    <style>
+        #diego {
+            left: 100vw;
+            animation-name: enter;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: both;
+
+        }
+        @keyframes enter {
+            from {
+                filter: blur(4px);
+            }
+            to {
+                left: 0;
+                top: 0;
+                filter: blur(0px);
+                filter: contrast(2)
+            }
+        }
+    </style>
+</div>

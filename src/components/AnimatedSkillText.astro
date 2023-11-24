@@ -1,0 +1,47 @@
+<h1 class="font-bold text-3xl">I'm a <span id="skill"></span></h1>
+
+<style>
+    span {
+        animation-name: twinkle;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+    }
+    @keyframes twinkle {
+        0% {
+            color: rgb(29, 78, 216);
+            opacity: 0;
+        }
+        20% {
+            color: rgb(244, 63, 94);
+            opacity: 1;
+        }
+        80% {
+            color: rgb(244, 63, 94);
+            opacity: 1;
+        }
+        100% {
+            color: rgb(29, 78, 216);
+            opacity: 0;
+        }
+    }
+</style>
+
+<script is:inline>
+    document.addEventListener("astro:page-load", () => {
+        const skill = document.querySelector("#skill");
+        const skills = ["Web Developer", "UI/UX Designer", "Rocket League professional player"];
+        skill.textContent = skills[Math.floor(Math.random() * skills.length)];
+        let prevSkill = skill.textContent;
+        skill.addEventListener("animationiteration", () => {
+            let nextSkill = skills[Math.floor(Math.random() * skills.length)];
+            while (prevSkill == nextSkill) {
+                nextSkill = skills[Math.floor(Math.random() * skills.length)];
+            }
+            prevSkill = nextSkill;
+            skill.textContent = nextSkill
+        });
+    }, { once: true });
+</script>

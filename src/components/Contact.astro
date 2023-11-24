@@ -1,0 +1,48 @@
+<div class="w-fit bg-rose-900 m-auto flex justify-around gap-20 p-10">
+    <div>
+        <h2>Contact me!</h2>
+        <div class="contact-methods">
+            asdasdasdsadasdasdasda
+        </div>
+    </div>
+    <div class="bg-gray-200 text-black rounded-lg p-5">
+        <form class="flex flex-col gap-10">
+            <div class="placeholder-container">
+                <input id="name-input" required placeholder="" class="bg-transparent border-b-2 border-rose-500 focus:outline-none" type="text">
+                <label for="name-input" class="placeholder">Your name</label>
+            </div>
+            <div class="placeholder-container">
+                <input id="email-input" required placeholder="" class="bg-transparent border-b-2 border-rose-500 focus:outline-none" type="email">
+                <label for="email-input" class="placeholder">Your email</label>
+            </div>
+            <div class="placeholder-container">
+                <input id="msg-input" required placeholder="" class="bg-transparent border-b-2 border-rose-500 focus:outline-none" type="text">
+                <label for="msg-input" class="placeholder">Your message</label>
+            </div>
+        </form>
+        <button type="submit">Send Message</button>
+    </div>
+</div>
+
+<style>
+    .placeholder-container {
+        position: relative;
+
+        ::before {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    }
+
+    input:is(:not(:placeholder-shown), :focus) + .placeholder {
+        transform: translateY(-20px);
+    }
+
+    .placeholder {
+        position: absolute;
+        left: 0;
+        transition: all 0.2s ease;
+    }
+</style>
