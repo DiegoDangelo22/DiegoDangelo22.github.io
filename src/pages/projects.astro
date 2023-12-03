@@ -4,22 +4,57 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Projects">
     <div class="bg-gray-900 pt-14 h-fit grid justify-items-center items-center">
-        <div class="grid grid-cols-2 gap-20 w-3/4 my-20">
-            <div class="bg-gray-200 h-fit p-6 rounded-md border-2 border-rose-500 grid gap-5">
-                <h1 class="bg-rose-500 rounded-md p-2 text-center self-end">My first portfolio (Dynamic)</h1>
+        <div class="grid grid-cols-2 gap-20 w-3/4 my-20 relative">
+            <div class="bg-gray-200 p-6 rounded-md border-2 border-rose-500 gap-5 flex flex-col">
+                <div class="bg-rose-500 rounded-md p-2 text-center flex grow items-center justify-center">
+                    <h1>My first portfolio (Dynamic)</h1>
+                </div>
                 <img src="/old-portfolio.png">
+                <div>
+                    <p class="text-center text-black mb-2">Source code:</p>
+                    <div class="flex justify-center gap-5">
+                        <a href="https://github.com/DiegoDangelo22/Back-End" class="bg-rose-500 rounded-md p-1 text-white hover:bg-rose-600">Backend</a>
+                        <a href="https://github.com/DiegoDangelo22/Front-End" class="bg-rose-500 rounded-md p-1 text-white hover:bg-rose-600">Frontend</a>
+                    </div>
+                </div>
             </div>
-            <div class="bg-gray-200 h-fit p-6 rounded-md border-2 border-rose-500 grid gap-5">
-                <h1 class="bg-rose-500 rounded-md p-2 text-center self-end">First e-commerce fully integrated with PayPal API</h1>
+            <div class="bg-gray-200 p-6 rounded-md border-2 border-rose-500 gap-5 flex flex-col">
+                <div class="bg-rose-500 rounded-md p-2 text-center flex grow items-center justify-center">
+                    <h1>First e-commerce fully integrated with PayPal API</h1>
+                </div>
                 <img src="/first-ecommerce.png">
+                <div>
+                    <p class="text-center text-black mb-2">Source code:</p>
+                    <div class="flex justify-center gap-5">
+                        <a href="https://github.com/DiegoDangelo22/MercaLibre-Back" class="bg-rose-500 rounded-md p-1 text-white hover:bg-rose-600">Backend</a>
+                        <a href="https://github.com/DiegoDangelo22/MercaLibre-Front" class="bg-rose-500 rounded-md p-1 text-white hover:bg-rose-600">Frontend</a>
+                    </div>
+                </div>
             </div>
-            <div class="bg-gray-200 h-fit p-6 rounded-md border-2 border-rose-500 grid gap-5">
-                <h1 class="bg-rose-500 rounded-md p-2 text-center self-end">Tetris with vanilla javascript</h1>
+            <div class="bg-gray-200 p-6 rounded-md border-2 border-rose-500 gap-5 flex flex-col">
+                <div class="bg-rose-500 rounded-md p-2 text-center flex grow items-center justify-center">
+                    <h1>Tetris with vanilla javascript</h1>
+                </div>
                 <img src="/tetris.png">
+                <div>
+                    <p class="text-center text-black mb-2">Source code:</p>
+                    <div class="flex justify-center gap-5">
+                        <a href="https://github.com/DiegoDangelo22/tetris-vanilla-js" class="bg-rose-500 rounded-md p-1 text-white hover:bg-rose-600">Frontend</a>
+                    </div>
+                </div>
             </div>
-            <div class="bg-gray-200 h-fit p-6 rounded-md border-2 border-rose-500 grid gap-5">
-                <h1 class="bg-rose-500 rounded-md p-2 text-center self-end">Social website like twitter</h1>
+            <div class="bg-gray-200 p-6 rounded-md border-2 border-rose-500 gap-5 flex flex-col">
+                <div class="bg-rose-500 rounded-md p-2 text-center flex grow items-center justify-center">
+                    <h1>Social website like twitter</h1>
+                </div>
                 <img src="/social website/home.png">
+                <div>
+                    <p class="text-center text-black mb-2">Source code:</p>
+                    <div class="flex justify-center gap-5">
+                        <a href="https://github.com/DiegoDangelo22/sns-back" class="bg-rose-500 rounded-md p-1 text-white hover:bg-rose-600">Backend</a>
+                        <a href="https://github.com/DiegoDangelo22/sns-front" class="bg-rose-500 rounded-md p-1 text-white hover:bg-rose-600">Frontend</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
