@@ -2,7 +2,6 @@ import { atom } from 'nanostores';
 import en from '../translations/en.json';
 import es from '../translations/es.json';
 import { getCookie, setCookie } from './cookieService';
-import { selectedLanguage } from './selectedLanguage';
 let languages = [es, en];
 
 export const selectedLanguage = atom();
