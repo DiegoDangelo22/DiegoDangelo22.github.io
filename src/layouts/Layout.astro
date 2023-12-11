@@ -7,11 +7,12 @@ const { title } = Astro.props;
 
 import { fade } from 'astro/transitions';
 import { ViewTransitions } from 'astro:transitions';
-import Header from '../components/Header.astro';
+import Header from '../components/Header.tsx';
 ---
 
+
 <!doctype html>
-<html lang="en" transition:animate={fade()}>
+<html lang="" transition:animate={fade()}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,13 +20,13 @@ import Header from '../components/Header.astro';
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito&family=Poppins:wght@300;400;500;600;700&display=swap');
         </style>
         <title>{title}</title>
         <ViewTransitions />
     </head>
     <body class=" flex flex-col gap-48">
-        <Header />
+        <Header client:only />
         <slot />
     </body>
 </html>
