@@ -4,9 +4,9 @@ import { useStore } from '@nanostores/react';
 const About = () => {
     const $selectedLanguage = useStore(selectedLanguage)
 
-    return <div id="about" className="h-screen pt-14 w-full flex justify-around items-center max-md:flex-col max-md:gap-10">
+    return <div id="about" className="h-fit pt-14 w-full flex justify-around items-center max-md:flex-col max-md:gap-10">
         <div>
-            <h2 className="text-center mb-5">{$selectedLanguage.about_me}</h2>
+            <h2 className="text-center mb-5 font-bold text-2xl">{$selectedLanguage.about_me}</h2>
             <img src="/diego.jpg" width="300px" className="rotate-180" />
         </div>
         <section className="w-2/4 h-full flex flex-col gap-10 justify-center">

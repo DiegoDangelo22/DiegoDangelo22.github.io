@@ -26,6 +26,9 @@ const Header = () => {
                 <a href="/#about">{$selectedLanguage.about}</a>
             </li>
             <li className="hover:text-rose-400">
+                <a href="/#skills">{$selectedLanguage.skills}</a>
+            </li>
+            <li className="hover:text-rose-400">
                 <a href="/#contact">{$selectedLanguage.contact}</a>
             </li>
             <div className="relative" onMouseEnter={()=>{
@@ -58,6 +61,9 @@ const Header = () => {
             </li>
             <li className="hover:text-rose-400">
                 <a href="/#about">{$selectedLanguage.about}</a>
+            </li>
+            <li className="hover:text-rose-400">
+                <a href="/#skills">{$selectedLanguage.skills}</a>
             </li>
             <li className="hover:text-rose-400">
                 <a href="/#contact">{$selectedLanguage.contact}</a>

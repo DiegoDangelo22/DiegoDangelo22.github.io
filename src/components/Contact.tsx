@@ -42,7 +42,7 @@ const Contact = () => {
     return (
         <div id="contact" className="rounded-lg w-fit bg-transparent m-auto flex flex-col gap-10 p-10 justify-center h-screen">
             <div>
-                <h2 className="text-center">{$selectedLanguage.contact_me}</h2>
+                <h2 className="text-center font-bold text-2xl mb-4">{$selectedLanguage.contact_me}</h2>
             </div>
             <form className="flex flex-col gap-10">
                 <div className="placeholder-container">

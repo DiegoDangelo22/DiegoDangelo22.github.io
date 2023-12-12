@@ -4,12 +4,16 @@ import About from "../components/About.tsx";
 import Contact from "../components/Contact.tsx";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import Skills from '../components/Skills.tsx';
 ---
 
 <Layout title="Diego Portfolio">
 	<Hero />
 	<div class="animation-fade-in">
 		<About client:only />
+	</div>
+	<div class="animation-fade-in">
+		<Skills client:only />
 	</div>
 	<div class="animation-fade-in">
 		<Contact client:only />
