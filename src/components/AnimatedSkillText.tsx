@@ -6,7 +6,7 @@ import { getCookie } from '../services/cookieService';
 
 const AnimatedSkillText = () => {
     const $selectedLanguage = useStore(selectedLanguage);
-    const [skillsArray, setSkillsArray]: any = useState([$selectedLanguage.skill_1, $selectedLanguage.skill_2, $selectedLanguage.skill_3]);
+    const [skillsArray, setSkillsArray]: any = useState([$selectedLanguage.skill_1, $selectedLanguage.skill_2]);
     const [currentSkill, setCurrentSkill]: any = useState(getRandomSkill());
     const [isFadingOut, setIsFadingOut] = useState(false);
 
@@ -36,8 +36,7 @@ const AnimatedSkillText = () => {
     useEffect(() => {
         setSkillsArray([
             $selectedLanguage.skill_1,
-            $selectedLanguage.skill_2,
-            $selectedLanguage.skill_3,
+            $selectedLanguage.skill_2
         ]);
 
         skillsArray.forEach((e: any) => {

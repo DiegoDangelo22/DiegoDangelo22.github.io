@@ -31,15 +31,16 @@ const Header = () => {
             <li className="hover:text-rose-400">
                 <a href="/#contact">{$selectedLanguage.contact}</a>
             </li>
-            <div className="relative" onMouseEnter={()=>{
-                    const modal:any = document.querySelector("#modal-mobile");
-                    modal.style.display = 'flex';
-                    setChangeLanguageModalShown(true);
-                }} onMouseLeave={()=>{
-                    const modal:any = document.querySelector("#modal-mobile");
-                    modal.style.display = 'none';
+            <div className="relative" onClick={()=>{
+                const modal:any = document.querySelector("#modal-mobile");
+                if(modal.style.display === 'flex') {
+                    modal.style.display = "none";
                     setChangeLanguageModalShown(false);
-                }}>
+                } else {
+                    modal.style.display = "flex";
+                    setChangeLanguageModalShown(true);
+                }
+            }}>
                 <li className={changeLanguageModalShown?'bg-rose-500':''}>{$selectedLanguage.change_language}</li>
                 <div id='modal-mobile' className='hidden flex-col gap-1 py-1 absolute left-[-112px] top-0 backdrop-blur-[10px]' style={{background: "rgba(17, 24, 39, 0.9)"}}>
                     <div className='flex gap-2 hover:text-rose-400 hover:cursor-pointer px-2' onClick={()=>handleLanguage('en')}>

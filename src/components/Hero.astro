@@ -2,7 +2,7 @@
 import AnimatedSkillText from "./AnimatedSkillText.tsx";
 ---
 
-<div class="h-screen py-14 box-content flex flex-col justify-center items-center gap-10 md:flex-row md:gap-36 overflow-hidden">
+<div style="height: calc(100vh - 56px)" class="py-14 box-content flex flex-col justify-center items-center gap-10 md:flex-row md:gap-36 overflow-hidden">
     <div class="items-start flex w-80 min-h-[72px]">
         <AnimatedSkillText client:only />
     </div>
@@ -30,7 +30,6 @@ import AnimatedSkillText from "./AnimatedSkillText.tsx";
                 left: 0;
                 top: 0;
                 filter: blur(0px);
-                filter: contrast(2)
             }
         }
     </style>

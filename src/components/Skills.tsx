@@ -5,7 +5,7 @@ const Skills = () => {
     const $selectedLanguage = useStore(selectedLanguage)
 
     return (
-    <section id='skills' className="h-fit pt-14 flex flex-col justify-center items-center">
+    <section id='skills' className="h-screen max-md:h-fit pt-14 flex flex-col justify-center items-center">
         <h1 className='font-bold text-2xl text-center'>{$selectedLanguage.skills_title}</h1>
         <div className='flex flex-wrap justify-center bg-slate-100 gap-16 py-6 border-2 rounded-2xl mt-8 mx-8'>
             <img title='HTML' src='/html.svg' className='w-24 h-24' />
